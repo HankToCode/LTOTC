@@ -12,6 +12,7 @@ import com.lt.ltotc.databinding.ActivityLoginBinding;
 import androidx.annotation.Nullable;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
+
 import com.lt.basics.base.BaseActivity;
 
 /**
@@ -33,7 +34,7 @@ public class LoginActivity extends BaseActivity<ActivityLoginBinding, LoginViewM
     public LoginViewModel initViewModel() {
         //使用自定义的ViewModelFactory来创建ViewModel，如果不重写该方法，则默认会调用LoginViewModel(@NonNull Application application)构造方法
         AppViewModelFactory factory = AppViewModelFactory.getInstance(getApplication());
-        return ViewModelProviders.of(this).get(LoginViewModel.class);
+        return ViewModelProviders.of(this, factory).get(LoginViewModel.class);
     }
 
     @Override
