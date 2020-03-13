@@ -10,9 +10,11 @@ import com.lt.basics.binding.command.BindingCommand
  */
 class ViewPagerItemViewModel(viewModel: ViewPagerViewModel, var text: String?) : ItemViewModel<ViewPagerViewModel?>(viewModel) {
     @JvmField
-    var onItemClick: BindingCommand<*> = BindingCommand<Any?>(BindingAction {
-        //点击之后将逻辑转到activity中处理
-        viewModel.itemClickEvent.value = text
+    var onItemClick: BindingCommand<*> = BindingCommand<Any?>(object : BindingAction {
+        override fun call() {
+            //点击之后将逻辑转到activity中处理
+            viewModel.itemClickEvent.value = text
+        }
     })
 
 }

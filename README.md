@@ -770,6 +770,13 @@ CAP#1从?的捕获扩展Object
 
 一般是由于gradle plugin版本3.5.1造成的，请换成gradle plugin 3.5.0以下版本
 
+
+#### 4.1.6 data binding error ****msg:cannot find method *** in class
+因为kotlin运行时还是被翻译成java字节码的,所以和.java中调用kotlin一样,在databinding中引用kotlin的对象声明和伴生对象也需要加上@JvmField和@JvmStatic
+注解才能将他们暴露为静态
+在方法上加上@JvmStatic注解,即可编译成功
+
+
 ## 混淆
 例子程序中给出了最新的【MVVMHabit混淆规则】，包含MVVMHabit中依赖的所有第三方library，可以将规则直接拷贝到自己app的混淆规则中。在此基础上你只需要关注自己业务代码以及自己引入第三方的混淆，【MVVMHabit混淆规则】请参考app目录下的[proguard-rules.pro](./app/proguard-rules.pro)文件。
 

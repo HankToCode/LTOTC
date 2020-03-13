@@ -32,7 +32,7 @@ open class ViewPagerViewModel(application: Application) : BaseViewModel<BaseMode
     val pageTitles: PageTitles<ViewPagerItemViewModel?> = PageTitles<ViewPagerItemViewModel?> { position, item -> "条目$position" }
     //ViewPager切换监听
     @JvmField
-    var onPageSelectedCommand = BindingCommand<Int>(object : BindingConsumer<Int?> {
+    var onPageSelectedCommand = BindingCommand(object : BindingConsumer<Int?> {
 
         override fun call(index: Int?) {
             ToastUtils.showShort("ViewPager切换：$index")
