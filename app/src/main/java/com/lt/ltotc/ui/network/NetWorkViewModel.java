@@ -65,7 +65,7 @@ public class NetWorkViewModel extends BaseViewModel<DemoRepository> {
                 return;
             }
             //模拟网络上拉加载更多
-            model.loadMore()
+            getModel().loadMore()
                     .compose(RxUtils.schedulersTransformer()) //线程调度
                     .doOnSubscribe(NetWorkViewModel.this) //请求与ViewModel周期同步
                     .doOnSubscribe(new Consumer<Disposable>() {
@@ -94,7 +94,7 @@ public class NetWorkViewModel extends BaseViewModel<DemoRepository> {
      */
     public void requestNetWork() {
         //可以调用addSubscribe()添加Disposable，请求与View周期同步
-        model.demoGet()
+        getModel().demoGet()
                 .compose(RxUtils.schedulersTransformer()) //线程调度
                 .compose(RxUtils.exceptionTransformer()) // 网络错误的异常转换, 这里可以换成自己的ExceptionHandle
                 .doOnSubscribe(this)//请求与ViewModel周期同步

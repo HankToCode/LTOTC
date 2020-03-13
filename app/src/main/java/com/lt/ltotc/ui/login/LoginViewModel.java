@@ -43,8 +43,8 @@ public class LoginViewModel extends BaseViewModel<DemoRepository> {
     public LoginViewModel(@NonNull Application application, DemoRepository repository) {
         super(application, repository);
         //从本地取得数据绑定到View层
-        userName.set(model.getUserName());
-        password.set(model.getPassword());
+        userName.set(getModel().getUserName());
+        password.set(getModel().getPassword());
     }
 
     //清除用户名的点击事件, 逻辑从View层转换到ViewModel层
@@ -94,7 +94,7 @@ public class LoginViewModel extends BaseViewModel<DemoRepository> {
             return;
         }
         //RaJava模拟登录
-        addSubscribe(model.login()
+        addSubscribe(getModel().login()
                 .compose(RxUtils.schedulersTransformer()) //线程调度
                 .doOnSubscribe(new Consumer<Disposable>() {
                     @Override
@@ -107,8 +107,8 @@ public class LoginViewModel extends BaseViewModel<DemoRepository> {
                     public void accept(Object o) throws Exception {
                         dismissDialog();
                         //保存账号密码
-                        model.saveUserName(userName.get());
-                        model.savePassword(password.get());
+                        getModel().saveUserName(userName.get());
+                        getModel().savePassword(password.get());
                         //进入DemoActivity页面
                         startActivity(DemoActivity.class);
                         //关闭页面
