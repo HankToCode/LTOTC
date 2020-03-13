@@ -6,6 +6,7 @@ import io.reactivex.Observable;
 import com.lt.basics.http.BaseResponse;
 
 /**
+ * 提供网络数据源接口定义
  * Created by HankGreen on 2019/3/26.
  */
 public interface HttpDataSource {

@@ -1,5 +1,6 @@
 package com.lt.ltotc.ui.network;
 
+import android.annotation.SuppressLint;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -27,6 +28,7 @@ import me.tatarka.bindingcollectionadapter2.BindingRecyclerViewAdapter;
  */
 
 public class NetWorkFragment extends BaseFragment<FragmentNetworkBinding, NetWorkViewModel> {
+    @SuppressLint("SourceLockedOrientationActivity")
     @Override
     public void initParam() {
         super.initParam();

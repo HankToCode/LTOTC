@@ -14,6 +14,7 @@ import io.reactivex.ObservableOnSubscribe;
 import com.lt.basics.http.BaseResponse;
 
 /**
+ * 处理HTTP请求
  * Created by HankGreen on 2019/3/26.
  */
 public class HttpDataSourceImpl implements HttpDataSource {

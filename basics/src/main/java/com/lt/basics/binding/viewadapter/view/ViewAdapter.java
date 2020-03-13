@@ -1,5 +1,6 @@
 package com.lt.basics.binding.viewadapter.view;
 
+import android.annotation.SuppressLint;
 import android.view.View;
 
 import com.jakewharton.rxbinding2.view.RxView;
@@ -13,7 +14,7 @@ import com.lt.basics.binding.command.BindingCommand;
 /**
  * Created by HankGreen on 2017/6/16.
  */
-
+@SuppressLint("CheckResult")
 public class ViewAdapter {
     //防重复点击间隔(秒)
     public static final int CLICK_INTERVAL = 1;

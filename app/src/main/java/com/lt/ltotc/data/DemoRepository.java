@@ -11,7 +11,7 @@ import com.lt.basics.base.BaseModel;
 import com.lt.basics.http.BaseResponse;
 
 /**
- * MVVM的Model层，统一模块的数据仓库，包含网络数据和本地数据（一个应用可以有多个Repositor）
+ * MVVM的Model层，统一模块的数据仓库，包含网络数据和本地数据（一个应用可以有多个Repository）
  * Created by HankGreen on 2019/3/26.
  */
 public class DemoRepository extends BaseModel implements HttpDataSource, LocalDataSource {

@@ -20,6 +20,8 @@ import io.reactivex.functions.Consumer;
 import com.lt.basics.bus.event.SingleLiveEvent;
 
 /**
+ * 基础视图模型
+ * * 主要处理视图交互
  * Created by HankGreen on 2017/6/15.
  */
 public class BaseViewModel<M extends BaseModel> extends AndroidViewModel implements IBaseViewModel, Consumer<Disposable> {

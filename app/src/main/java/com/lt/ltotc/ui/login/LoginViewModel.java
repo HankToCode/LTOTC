@@ -21,6 +21,7 @@ import com.lt.basics.utils.RxUtils;
 import com.lt.basics.utils.ToastUtils;
 
 /**
+ * 登陆视图模型
  * Created by HankGreen on 2017/7/17.
  */
 

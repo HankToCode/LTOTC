@@ -583,6 +583,7 @@ Messenger.getDefault().send("refresh",LoginViewModel.TOKEN_LOGINVIEWMODEL_REFRES
 
 
 注册了监听，当然也要解除它。在BaseActivity、BaseFragment的onDestroy()方法里已经调用`Messenger.getDefault().unregister(viewModel);`解除注册，所以不用担心忘记解除导致的逻辑错误和内存泄漏。
+补充：以上做法RxBus也是能完成的，但是没必要多增加event类。
 ### 3.2、文件下载
 文件下载几乎是每个app必备的功能，图文的下载，软件的升级等都要用到，mvvmhabit使用Retrofit+Okhttp+RxJava+RxBus实现一行代码监听带进度的文件下载。
 
