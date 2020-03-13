@@ -7,6 +7,7 @@ import com.lt.basics.binding.command.BindingConsumer;
 
 
 /**
+ * //TODO 此处目前无法转换kotlin 业务逻辑要重写
  * About : kelin的WeakBindingAction
  */
 public class WeakAction<T> {
