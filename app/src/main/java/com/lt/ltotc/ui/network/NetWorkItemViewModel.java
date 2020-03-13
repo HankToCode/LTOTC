@@ -36,7 +36,7 @@ public class NetWorkItemViewModel extends ItemViewModel<NetWorkViewModel> {
      * @return
      */
     public int getPosition() {
-        return viewModel.getItemPosition(this);
+        return getViewModel().getItemPosition(this);
     }
 
     //条目的点击事件
@@ -45,12 +45,12 @@ public class NetWorkItemViewModel extends ItemViewModel<NetWorkViewModel> {
         public void call() {
             //这里可以通过一个标识,做出判断，已达到跳入不同界面的逻辑
             if (entity.get().getId() == -1) {
-                viewModel.deleteItemLiveData.setValue(NetWorkItemViewModel.this);
+                getViewModel().deleteItemLiveData.setValue(NetWorkItemViewModel.this);
             } else {
                 //跳转到详情界面,传入条目的实体对象
                 Bundle mBundle = new Bundle();
                 mBundle.putParcelable("entity", entity.get());
-                viewModel.startContainerActivity(DetailFragment.class.getCanonicalName(), mBundle);
+                getViewModel().startContainerActivity(DetailFragment.class.getCanonicalName(), mBundle);
             }
         }
     });

@@ -117,6 +117,7 @@ open class BaseViewModel<M : BaseModel?> @JvmOverloads constructor(application: 
     }
 
     override fun onAny(owner: LifecycleOwner, event: Lifecycle.Event) {}
+
     override fun onCreate() {}
     override fun onDestroy() {}
     override fun onStart() {}
