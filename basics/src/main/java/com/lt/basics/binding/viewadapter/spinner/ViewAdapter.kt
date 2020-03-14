@@ -25,7 +25,7 @@ object ViewAdapter {
      */
     @JvmStatic
     @BindingAdapter(value = ["itemDatas", "valueReply", "resource", "dropDownResource", "onItemSelectedCommand"], requireAll = false)
-    fun onItemSelectedCommand(spinner: Spinner, itemDatas: List<IKeyAndValue>?, valueReply: String, resource: Int, dropDownResource: Int, bindingCommand: BindingCommand<IKeyAndValue?>) {
+    fun onItemSelectedCommand(spinner: Spinner, itemDatas: List<IKeyAndValue>?, valueReply: String?, resource: Int, dropDownResource: Int, bindingCommand: BindingCommand<IKeyAndValue?>?) {
         var resource = resource
         var dropDownResource = dropDownResource
         if (itemDatas == null) {
@@ -48,7 +48,7 @@ object ViewAdapter {
             override fun onItemSelected(parent: AdapterView<*>?, view: View, position: Int, id: Long) {
                 val iKeyAndValue = itemDatas[position]
                 //将IKeyAndValue对象交给ViewModel
-                bindingCommand.execute(iKeyAndValue)
+                bindingCommand?.execute(iKeyAndValue)
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {}
