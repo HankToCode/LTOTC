@@ -21,12 +21,12 @@ import java.util.concurrent.TimeUnit
  */
 class DownLoadManager private constructor() {
     //下载
-    fun load(downUrl: String?, callBack: ProgressCallBack<*>) {
+    fun load(downUrl: String?, callBack: ProgressCallBack<ResponseBody?>) {
         retrofit!!.create(ApiService::class.java)
                 .download(downUrl)
                 .subscribeOn(Schedulers.io()) //请求网络 在调度者的io线程
                 .observeOn(Schedulers.io()) //指定线程保存文件
-                .doOnNext { responseBody -> callBack.saveFile(responseBody) }
+                .doOnNext { responseBody -> responseBody?.let { callBack.saveFile(it) } }
                 .observeOn(AndroidSchedulers.mainThread()) //在主线程中更新ui
                 .subscribe(DownLoadSubscriber(callBack))
     }
