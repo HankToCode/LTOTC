@@ -29,7 +29,7 @@ class MemoryCookieStore : CookieStore {
         val cookies: MutableList<Cookie>? = memoryCookies[url!!.host()]
         val needRemove: MutableList<Cookie?> = ArrayList()
         for (item in cookies!!) {
-            if (cookie!!.name() == item!!.name()) {
+            if (cookie.name() == item.name()) {
                 needRemove.add(item)
             }
         }
