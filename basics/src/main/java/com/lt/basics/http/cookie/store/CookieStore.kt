@@ -11,7 +11,7 @@ interface CookieStore {
     fun saveCookie(url: HttpUrl?, cookie: List<Cookie>?)
 
     /** 保存url对应所有cookie  */
-    fun saveCookie(url: HttpUrl?, cookie: Cookie?)
+    fun saveCookie(url: HttpUrl?, cookie: Cookie)
 
     /** 加载url所有的cookie  */
     fun loadCookie(url: HttpUrl?): List<Cookie>

@@ -17,7 +17,8 @@ import com.lt.ltotc.ui.viewpager.vm.ViewPagerViewModel
  * Created by HankGreen on 2018/7/18.
  */
 class ViewPagerActivity : BaseActivity<FragmentViewpagerBinding, ViewPagerViewModel>() {
-    override fun initContentView(savedInstanceState: Bundle): Int {
+    //kotlin空指针判断了解一下 Bundle不设置为Bundle?就会闪退
+    override fun initContentView(savedInstanceState: Bundle?): Int {
         return R.layout.fragment_viewpager
     }
 
