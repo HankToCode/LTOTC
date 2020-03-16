@@ -18,7 +18,7 @@ object Injection {
         //网络数据源
         val httpDataSource: HttpDataSource = HttpDataSourceImpl.getInstance(apiService)
         //本地数据源
-        val localDataSource: LocalDataSource = LocalDataSourceImpl.getInstance()
+        val localDataSource: LocalDataSource = LocalDataSourceImpl.instance
         //两条分支组成一个数据仓库
         return DemoRepository.getInstance(httpDataSource, localDataSource)
     }

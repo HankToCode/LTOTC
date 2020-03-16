@@ -8,12 +8,12 @@ import com.lt.ltotc.data.source.LocalDataSource
  * Created by HankGreen on 2019/3/26.
  */
 class LocalDataSourceImpl private constructor() : LocalDataSource {
-    override fun saveUserName(userName: String?) {
-        SPUtils.getInstance().put("UserName", userName!!)
+    override fun saveUserName(userName: String) {
+        SPUtils.getInstance().put("UserName", userName)
     }
 
-    override fun savePassword(password: String?) {
-        SPUtils.getInstance().put("password", password!!)
+    override fun savePassword(password: String) {
+        SPUtils.getInstance().put("password", password)
     }
 
     override fun getUserName(): String? {
@@ -28,7 +28,7 @@ class LocalDataSourceImpl private constructor() : LocalDataSource {
         @Volatile
         private var INSTANCE: LocalDataSourceImpl? = null
 
-        val instance: LocalDataSourceImpl?
+        val instance: LocalDataSourceImpl
             get() {
                 if (INSTANCE == null) {
                     synchronized(LocalDataSourceImpl::class.java) {
@@ -37,7 +37,7 @@ class LocalDataSourceImpl private constructor() : LocalDataSource {
                         }
                     }
                 }
-                return INSTANCE
+                return INSTANCE!!
             }
 
         fun destroyInstance() {

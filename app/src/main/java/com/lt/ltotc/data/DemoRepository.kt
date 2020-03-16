@@ -30,11 +30,11 @@ class DemoRepository private constructor(private val mHttpDataSource: HttpDataSo
         return mHttpDataSource.demoPost(catalog)
     }
 
-    override fun saveUserName(userName: String?) {
+    override fun saveUserName(userName: String) {
         mLocalDataSource.saveUserName(userName)
     }
 
-    override fun savePassword(password: String?) {
+    override fun savePassword(password: String) {
         mLocalDataSource.savePassword(password)
     }
 
