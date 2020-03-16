@@ -12,7 +12,7 @@ import com.lt.basics.binding.command.BindingAction;
 import com.lt.basics.binding.command.BindingCommand;
 
 /**
- * Create Author：goldze
+ * Create Author：HankGreen
  * Create Date：2019/01/03
  * Description： 对应include标题的ToolbarViewModel
  * Toolbar的封装方式有很多种，具体封装需根据项目实际业务和习惯来编写
