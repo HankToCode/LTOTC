@@ -39,10 +39,10 @@ public abstract class BaseActivity<V extends ViewDataBinding, VM extends BaseVie
         super.onCreate(savedInstanceState);
         //页面接受的参数方法
         initParam();
-        //私有的初始化Databinding和ViewModel方法
+       //私有的初始化Databinding和ViewModel方法
         initViewDataBinding(savedInstanceState);
         //私有的ViewModel与View的契约事件回调逻辑
-        registorUIChangeLiveDataCallBack();
+         registorUIChangeLiveDataCallBack();
         //页面数据初始化方法
         initData();
         //页面事件监听的方法，一般用于ViewModel层转到View层的事件注册

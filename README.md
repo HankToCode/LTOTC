@@ -71,11 +71,11 @@ dependencies {
 ```
 或
 
-下载例子程序，在主项目app的build.gradle中依赖例子程序中的**mvvmhabit**：
+下载例子程序，在主项目app的build.gradle中依赖例子程序中的**basics**：
 ```gradle
 dependencies {	
     ...
-    implementation project(':mvvmhabit')
+    implementation project(':basics')
 }
 ```
 
@@ -105,7 +105,7 @@ dependencies = [] 是依赖第三方库的配置，可以加新库，但不要�
 ```
 配置Application：
 
-继承**mvvmhabit**中的BaseApplication，或者调用
+继承**basics**中的BaseApplication，或者调用
 
 ```java
 BaseApplication.setApplication(this);
@@ -143,7 +143,7 @@ CaocConfig.Builder.create()
 <layout>
     <data>
         <variable
-            type="com.goldze.mvvmhabit.ui.login.LoginViewModel"
+            type="com.lt.otc.ui.login.LoginViewModel"
             name="viewModel"
         />
     </data>
@@ -333,7 +333,7 @@ url是图片路径，这样绑定后，这个ImageView就会去显示这张图�
 ```xml
 binding:placeholderRes="@{R.mipmap.ic_launcher_round}"
 ```
-> R文件需要在data标签中导入使用，如：`<import type="com.goldze.mvvmhabit.R" />`
+> R文件需要在data标签中导入使用，如：`<import type="com.lt.otc.R" />`
 
 BindingAdapter中的实现
 ```java
@@ -381,7 +381,7 @@ layoutManager控制是线性(包含水平和垂直)排列还是网格排列，li
 使用到相关类，则需要导入该类才能使用，和导入Java类相似
 
 > `<import type="me.tatarka.bindingcollectionadapter2.LayoutManagers" />`</br>
-> `<import type="me.goldze.mvvmhabit.binding.viewadapter.recyclerview.LineManagers" />`</br>
+> `<import type="com.lt.basics.binding.viewadapter.recyclerview.LineManagers" />`</br>
 > `<import type="android.support.v7.widget.LinearLayoutManager" />`
 
 
