@@ -14,6 +14,7 @@ import java.util.List;
 
 import androidx.annotation.NonNull;
 import androidx.databinding.ObservableBoolean;
+
 import com.lt.basics.binding.command.BindingAction;
 import com.lt.basics.binding.command.BindingCommand;
 import com.lt.basics.binding.command.BindingConsumer;
