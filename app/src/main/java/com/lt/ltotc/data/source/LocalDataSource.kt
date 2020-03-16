@@ -1,27 +1,26 @@
-package com.lt.ltotc.data.source;
+package com.lt.ltotc.data.source
 
 /**
  * Created by HankGreen on 2019/3/26.
  */
-public interface LocalDataSource {
+interface LocalDataSource {
     /**
      * 保存用户名
      */
-    void saveUserName(String userName);
+    fun saveUserName(userName: String?)
 
     /**
      * 保存用户密码
      */
-
-    void savePassword(String password);
+    fun savePassword(password: String?)
 
     /**
      * 获取用户名
      */
-    String getUserName();
+    fun getUserName(): String?
 
     /**
      * 获取用户密码
      */
-    String getPassword();
+    fun getPassword(): String?
 }
