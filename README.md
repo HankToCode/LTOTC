@@ -776,6 +776,13 @@ CAP#1从?的捕获扩展Object
 注解才能将他们暴露为静态
 在方法上加上@JvmStatic注解,即可编译成功
 
+#### 4.1.7 databinding safeUnbox()
+当使用databinding，在layout.xml中使用类型转换，会出现warning，使用safeUnbox()即可：
+```
+android:text='@{String.valueOf(1 + safeUnbox((Integer)obMap["age"]))}'
+android:text='@{String.valueOf(1 + safeUnbox((Integer)obList[Fields.AGE]))}'
+```
+
 
 ## 混淆
 例子程序中给出了最新的【MVVMHabit混淆规则】，包含MVVMHabit中依赖的所有第三方library，可以将规则直接拷贝到自己app的混淆规则中。在此基础上你只需要关注自己业务代码以及自己引入第三方的混淆，【MVVMHabit混淆规则】请参考app目录下的[proguard-rules.pro](./app/proguard-rules.pro)文件。

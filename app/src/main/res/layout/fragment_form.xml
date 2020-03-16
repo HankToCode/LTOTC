@@ -106,7 +106,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
                 binding:onCheckedChangeCommand="@{viewModel.onMarryCheckedChangeCommand}"
-                binding:switchState="@{viewModel.entity.marry}" />
+                binding:switchState="@{safeUnbox(viewModel.entity.marry)}" />
         </LinearLayout>
 
         <Button

@@ -21,7 +21,7 @@ class MultiRecycleViewModel(application: Application) : BaseViewModel<BaseModel?
     var observableList: ObservableList<MultiItemViewModel<*>> = ObservableArrayList()
     //RecyclerView多布局添加ItemBinding
     @JvmField
-    var itemBinding = ItemBinding.of<MultiItemViewModel<*>> { itemBinding, position, item ->
+    var itemBinding = ItemBinding.of<MultiItemViewModel<*>> { itemBinding, _, item ->
         //通过item的类型, 动态设置Item加载的布局
         val itemType = item.itemType as String?
         if (MultiRecycleType_Head == itemType) { //设置头布局

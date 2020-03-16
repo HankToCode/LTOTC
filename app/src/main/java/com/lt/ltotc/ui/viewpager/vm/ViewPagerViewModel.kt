@@ -29,13 +29,13 @@ open class ViewPagerViewModel(application: Application) : BaseViewModel<BaseMode
     var itemBinding = ItemBinding.of<ViewPagerItemViewModel>(BR.viewModel, R.layout.item_viewpager)
     //给ViewPager添加PageTitle
     @JvmField
-    val pageTitles: PageTitles<ViewPagerItemViewModel?> = PageTitles<ViewPagerItemViewModel?> { position, item -> "条目$position" }
+    val pageTitles: PageTitles<ViewPagerItemViewModel?> = PageTitles<ViewPagerItemViewModel?> { position, _ -> "条目$position" }
     //ViewPager切换监听
     @JvmField
     var onPageSelectedCommand = BindingCommand(object : BindingConsumer<Int?> {
 
-        override fun call(index: Int?) {
-            ToastUtils.showShort("ViewPager切换：$index")
+        override fun call(t: Int?) {
+            ToastUtils.showShort("ViewPager切换：$t")
         }
     })
 
