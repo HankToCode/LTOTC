@@ -771,12 +771,12 @@ CAP#1从?的捕获扩展Object
 一般是由于gradle plugin版本3.5.1造成的，请换成gradle plugin 3.5.0以下版本
 
 
-#### 4.1.6 data binding error ****msg:cannot find method *** in class
+##### 4.1.6 data binding error ****msg:cannot find method *** in class
 因为kotlin运行时还是被翻译成java字节码的,所以和.java中调用kotlin一样,在databinding中引用kotlin的对象声明和伴生对象也需要加上@JvmField和@JvmStatic
 注解才能将他们暴露为静态
 在方法上加上@JvmStatic注解,即可编译成功
 
-#### 4.1.7 databinding safeUnbox()
+##### 4.1.7 databinding safeUnbox()
 当使用databinding，在layout.xml中使用类型转换，会出现warning，使用safeUnbox()即可：
 ```
 android:text='@{String.valueOf(1 + safeUnbox((Integer)obMap["age"]))}'
