@@ -26,7 +26,7 @@ class DemoRepository private constructor(private val mHttpDataSource: HttpDataSo
         return mHttpDataSource.demoGet()
     }
 
-    override fun demoPost(catalog: String): Observable<BaseResponse<DemoEntity>> {
+    override fun demoPost(catalog: String?): Observable<BaseResponse<DemoEntity>> {
         return mHttpDataSource.demoPost(catalog)
     }
 

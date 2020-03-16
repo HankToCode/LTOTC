@@ -38,7 +38,7 @@ class HttpDataSourceImpl private constructor(private val apiService: DemoApiServ
         return apiService.demoGet()
     }
 
-    override fun demoPost(catalog: String): Observable<BaseResponse<DemoEntity>> {
+    override fun demoPost(catalog: String?): Observable<BaseResponse<DemoEntity>> {
         return apiService.demoPost(catalog)
     }
 
