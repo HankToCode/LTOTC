@@ -9,7 +9,7 @@ import com.lt.basics.binding.command.BindingCommand
 import com.lt.basics.utils.ToastUtils
 
 /**
- * Create Author：goldze
+ * Create Author：HankGreen
  * Create Date：2019/01/25
  * Description：
  */

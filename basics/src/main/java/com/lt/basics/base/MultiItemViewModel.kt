@@ -1,7 +1,7 @@
 package com.lt.basics.base
 
 /**
- * Create Author：goldze
+ * Create Author：HankGreen
  * Create Date：2019/01/25
  * Description：RecycleView多布局ItemViewModel是封装
  */

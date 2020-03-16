@@ -10,7 +10,7 @@ import com.lt.ltotc.databinding.FragmentMultiRvBinding
 import me.tatarka.bindingcollectionadapter2.BindingRecyclerViewAdapter
 
 /**
- * Create Author：goldze
+ * Create Author：HankGreen
  * Create Date：2019/01/25
  * Description：RecycleView多布局实现
  */
