@@ -12,7 +12,7 @@ import java.util.List;
 import androidx.fragment.app.Fragment;
 
 /**
- * Create Author：HankGreen
+ * Create Author：goldze
  * Create Date：2019/01/25
  * Description：ViewPager+Fragment的实现
  */

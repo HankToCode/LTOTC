@@ -11,7 +11,7 @@ import com.lt.ltotc.R
 import me.tatarka.bindingcollectionadapter2.ItemBinding
 
 /**
- * Create Author：HankGreen
+ * Create Author：goldze
  * Create Date：2019/01/25
  * Description：
  */
