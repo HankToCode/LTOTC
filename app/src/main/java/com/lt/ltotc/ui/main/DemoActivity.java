@@ -1,6 +1,7 @@
 package com.lt.ltotc.ui.main;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
@@ -24,6 +25,7 @@ import okhttp3.ResponseBody;
  */
 
 public class DemoActivity extends BaseActivity<ActivityDemoBinding, DemoViewModel> {
+    @SuppressLint("SourceLockedOrientationActivity")
     @Override
     public void initParam() {
         super.initParam();
